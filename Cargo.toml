@@ -1,0 +1,16 @@
+[package]
+name = "setup_rust_project"
+version = "0.0.0"
+edition = "2021"
+
+[dependencies]
+#シリアライズ/デシリアライズ
+serde = { version = "*", features = ["derive"] }
+serde_json = { version = "*" }
+toml = "*"
+winapi={version = "*", features = ["winuser"]}
+
+[profile.dev]
+opt-level = 1
+[profile.dev.package."*"]
+opt-level = 3
