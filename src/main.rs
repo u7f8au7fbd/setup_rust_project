@@ -1,3 +1,4 @@
+#![windows_subsystem = "windows"]
 use serde_json::{self, json};
 use std::ffi::OsStr;
 use std::fs;
@@ -25,7 +26,7 @@ fn dialog(massage: &str) {
         .encode_wide()
         .chain(Some(0))
         .collect::<Vec<_>>();
-    let title = OsStr::new("エラー")
+    let title = OsStr::new("ログ")
         .encode_wide()
         .chain(Some(0))
         .collect::<Vec<_>>();
