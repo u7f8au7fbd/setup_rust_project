@@ -1,6 +1,6 @@
 [package]
 name = "setup_rust_project"
-version = "1.0.1"
+version = "1.1.0"
 edition = "2021"
 
 [dependencies]
@@ -8,7 +8,7 @@ edition = "2021"
 serde = { version = "*", features = ["derive"] }
 serde_json = { version = "*" }
 toml = "*"
-winapi={version = "*", features = ["winuser"]}
+winapi = { version = "*", features = ["winuser"] }
 
 [profile.dev]
 opt-level = 1
