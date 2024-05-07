@@ -102,7 +102,7 @@ fn make_code_workspace(project_name: &str) {
         }
     });
 
-    let json_str = serde_json::to_string(&data).unwrap();
+    let json_str = serde_json::to_string_pretty(&data).unwrap();
     let fire_path = format!("{}.code-workspace", project_name);
     let mut file = File::create(fire_path).unwrap();
     file.write_all(json_str.as_bytes()).unwrap();
