@@ -136,7 +136,7 @@ fn make_launch_json(project_name: &str) {
         ]
     });
 
-    let json_str = serde_json::to_string(&data).unwrap();
+    let json_str = serde_json::to_string_pretty(&data).unwrap();
     let mut file = File::create("./.vscode/launch.json").unwrap();
     file.write_all(json_str.as_bytes()).unwrap();
 }
